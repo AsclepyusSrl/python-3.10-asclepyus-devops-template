@@ -41,6 +41,8 @@ def move_markdown_files(
             continue  # Skip the root README.md
         if any(excluded_dir in md_file.parents for excluded_dir in excluded_dirs):
             continue  # Skip files in excluded directories
+        if md_file.name == "PULL_REQUEST_TEMPLATE.md" and ".github" in md_file.parts:
+            continue  # Skip the pull request template
         dest_path = docs_dir / md_file.relative_to(root_dir)
         if dry_run:
             logging.info("Dry run: Would move %s to %s", md_file, dest_path)

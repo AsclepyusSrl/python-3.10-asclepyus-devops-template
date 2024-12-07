@@ -5,13 +5,10 @@ on:
         - 'assets/**'
 
 jobs:
-    determine-runner:
-      uses: ./.github/workflows/runner-strategy.yml
 
     pr_agent_job:
-      needs: determine-runner
       if: ${{ github.event.sender.type != 'Bot' && !github.event.pull_request.draft }}
-      runs-on: ${{ fromJson(needs.determine-runner.outputs.runner) }}
+      runs-on: ubuntu-latest
       timeout-minutes: 10
       permissions:
         issues: write

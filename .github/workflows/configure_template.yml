@@ -3,6 +3,8 @@ name: Rename the project from template
 on: [push]
 
 permissions: write-all
+env:
+  GITHUB_TOKEN: ${{ secrets.Workflow_PAT }}
 
 jobs:
   rename-project:

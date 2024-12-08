@@ -9,7 +9,7 @@ jobs:
 
   release:
     # Prevent the workflow from running on commits made by the GitHub Actions bot
-    if: github.actor != 'github-actions[bot]' && ${{ !contains (github.repository, 'template') }}
+    if: github.actor != 'github-actions[bot]' && !contains(github.repository, '-template')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,8 +30,8 @@ jobs:
 
       # 3. Zip Worker folder
       - name: Zip Worker folder
-        run: |
-          zip -r worker.zip worker/
+        run: | #! Replace with your package name
+          zip -r package_name.zip src/package_name/ 
 
       # 4. Install Poetry
       - name: Install Poetry

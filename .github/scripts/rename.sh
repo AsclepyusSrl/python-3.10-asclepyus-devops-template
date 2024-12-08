@@ -29,13 +29,12 @@ done
 # Rename package
 mv src/package_name src/$urlname
 
-# Remove template check from release workflow
+# Change release workflow trigger from none to main
 sed -i "s/- none # Automatically changes to main after first push/- main/" .github/workflows/release.yml
 
 # Clear README.md
 echo "# $readable_name" > README.md
 
 # Clean up template files
-rm -rf .github/template.yml
 rm -rf .github/scripts/rename.sh
 rm -rf .github/workflows/configure_template.yml

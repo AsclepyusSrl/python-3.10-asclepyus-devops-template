@@ -30,8 +30,7 @@ done
 mv src/package_name src/$urlname
 
 # Remove template check from release workflow
-sed -i "s/ \&\& !contains(github.repository, '-template')//" .github/workflows/release.yml
-sed -i "s/ \&\& always() \&\& hashFiles('.github\/template.yml') == ''//" .github/workflows/release.yml
+sed -i "s/- none # Automatically changes to main after first push/- main/" .github/workflows/release.yml
 
 # Clear README.md
 echo "# $readable_name" > README.md

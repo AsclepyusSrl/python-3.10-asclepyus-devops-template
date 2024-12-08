@@ -3,16 +3,14 @@ name: Create a New Release
 on:
   push:
     branches:
-      - main
+      - none # Automatically changes to main after first push
 
 jobs:
 
   release:
     # Prevent the workflow from running on commits made by the GitHub Actions bot
     if: |
-      github.actor != 'github-actions[bot]' && 
-      !contains(github.repository, '-template') && 
-       always() && hashFiles('.github/template.yml') == ''
+      github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: write

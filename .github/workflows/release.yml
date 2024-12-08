@@ -9,7 +9,10 @@ jobs:
 
   release:
     # Prevent the workflow from running on commits made by the GitHub Actions bot
-    if: github.actor != 'github-actions[bot]' && !contains(github.repository, '-template')
+    if: |
+      github.actor != 'github-actions[bot]' && 
+      !contains(github.repository, '-template') && 
+      hashFiles('.github/template.yml') == ''
     runs-on: ubuntu-latest
     permissions:
       contents: write

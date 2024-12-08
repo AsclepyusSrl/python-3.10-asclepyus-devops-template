@@ -36,5 +36,6 @@ sed -i "s/ \&\& !contains(github.repository, '-template')//" .github/workflows/r
 echo "# $readable_name" > README.md
 
 # Clean up template files
+rm -rf .github/template.yml
 rm -rf .github/scripts/rename.sh
 rm -rf .github/workflows/configure_template.yml

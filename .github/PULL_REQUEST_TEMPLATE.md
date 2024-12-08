@@ -1,5 +1,5 @@
 <!--
-Thank you for contributing to <<{package_name}>>! Please ensure you have completed the following sections before submitting your pull request.
+Thank you for contributing to <<{readable_name}>>! Please ensure you have completed the following sections before submitting your pull request.
 -->
 
 ## Description

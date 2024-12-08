@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: '3.10'  # Ensure this matches your project's Python version
 
-      # 3. Zip Worker folder
+      # 3. Zip package
       - name: Zip Worker folder
         run: | #! Default package name is the repository name, change it if needed
           zip -r <<{repo_name}>>.zip src/<<{repo_name}>>/ 

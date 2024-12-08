@@ -19,6 +19,7 @@ jobs:
       - name: Rename the project
         run: |
           echo "Configuring repository ${{ github.repository }}"
+          chmod +x .github/scripts/rename.sh
           .github/scripts/rename.sh -r "${{ github.repository }}"
               
       - uses: stefanzweifel/git-auto-commit-action@v4

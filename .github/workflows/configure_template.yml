@@ -2,9 +2,11 @@ name: Rename the project from template
 
 on:
   workflow_run:
-    workflows: [Create a New Release]
+    workflows: ["Create a New Release"]
     types:
-      - completed
+      - in_progress
+    branches:
+      - main
 
 permissions: write-all
 

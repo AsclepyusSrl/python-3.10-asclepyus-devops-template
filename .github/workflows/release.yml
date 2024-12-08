@@ -12,7 +12,7 @@ jobs:
     if: |
       github.actor != 'github-actions[bot]' && 
       !contains(github.repository, '-template') && 
-      hashFiles('.github/template.yml') == ''
+       always() && hashFiles('.github/template.yml') == ''
     runs-on: ubuntu-latest
     permissions:
       contents: write

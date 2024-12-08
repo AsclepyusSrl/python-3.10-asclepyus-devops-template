@@ -15,6 +15,7 @@ jobs:
           # this fetches all history so that we can read each commit
           fetch-depth: 0
           ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rename the project
         run: |
@@ -25,6 +26,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "✅ Ready to clone and code."
-          token: ${{ secrets.GITHUB_TOKEN }}
           # commit_options: '--amend --no-edit'
           push_options: --force

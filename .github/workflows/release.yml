@@ -5,9 +5,8 @@ on:
     branches:
       - none # Automatically changes to main after first push
 
-jobs:
-
-      # Prevent the workflow from running on commits made by the GitHub Actions bot
+  release:
+    # Prevent the workflow from running on commits made by the GitHub Actions bot
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     permissions:

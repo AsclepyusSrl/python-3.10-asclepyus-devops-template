@@ -52,7 +52,7 @@ Releases are automatically created when you push to main. The version bump is de
 └── tests/           # Test files
 ```
 
-> **Note**: By default, the package name under `src/` will be set to your repository name. If you want to use a different name, make sure to also update the package name in the release workflow [release workflow](.github/workflows/release.yml#L34).
+> **Note**: By default, the package name under `src/` will be set to your repository name. If you want to use a different name, make sure to also update the package name in the [release workflow](.github/workflows/release.yml#L34).
 
 ## License
 

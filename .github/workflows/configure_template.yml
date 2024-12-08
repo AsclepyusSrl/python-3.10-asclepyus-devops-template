@@ -2,7 +2,9 @@ name: Rename the project from template
 
 on: [push]
 
-permissions: write-all
+permissions:
+  contents: write
+  workflows: write
 
 jobs:
   rename-project:

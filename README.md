@@ -42,6 +42,9 @@ Run the setup script:
 ```bash
 ./setup.bat
 ```
+```bash
+.venv\Scripts\activate
+```
 
 ## Creating Releases
 

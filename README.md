@@ -27,6 +27,28 @@ An internal Python project template for Asclepyus projects, featuring automated 
    - Requires a Gemini API key and  be stored as an repository secret named `GEMINI_API_KEY`
    - Click here to generate your own personal api key https://aistudio.google.com/app/apikey
 
+2. GPT API KEY
+   - Requires a GPT API key and  be stored as an repository secret named `GPT_API_KEY`
+
+3. FEATURE_PRAGENT
+   - Requires a boolean value and  be stored as an repository Variable named `FEATURE_PRAGENT`
+   - Default value is `true`
+
+4. FEATURE_DOCS
+   - Requires a boolean value and  be stored as an repository Variable named `FEATURE_DOCS`
+   - Default value is `true`
+
+5. FEATURE_CI
+   - Requires a boolean value and  be stored as an repository Variable named `FEATURE_CI`
+   - Default value is `true`
+
+6. FEATURE_CD
+   - Requires a boolean value and  be stored as an repository Variable named `FEATURE_CD`
+   - Default value is `true`
+
+7. Workflow PAT
+   - Requires a Workflow PAT and  be stored as an Organization secret named `Workflow_PAT` (Should be done by the Administrator)
+
 ## Quick Start
 
 1. Click the "Use this template" button at the top of this repository

@@ -1,25 +1,23 @@
 on:
-    pull_request:
-      types: [ opened, reopened, ready_for_review ]
-      paths-ignore:
-        - 'assets/**'
-
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+  issue_comment:
+      types: [created]
 jobs:
-
-    pr_agent_job:
-      if: ${{ github.event.sender.type != 'Bot' && !github.event.pull_request.draft }}
-      runs-on: ubuntu-latest
-      timeout-minutes: 10
-      permissions:
-        issues: write
-        pull-requests: write
-        contents: write
-      name: Run pr agent on every pull request, respond to user comments
-      steps:
-        - name: PR Agent action step
-          id: pragent
-          uses: Codium-ai/pr-agent@main
-          env:
-            OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            OPENAI_MODEL: o1-mini  # Specify the model here
+  pr_agent_job:
+    if: ${{ github.event.sender.type != 'Bot' && vars.FEATURE_PRAGENT == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
+    name: Run pr agent on every pull request, respond to user comments
+    steps:
+      - name: PR Agent action step
+        id: pragent
+        uses: qodo-ai/pr-agent@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_AI_STUDIO.GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CONFIG.MODEL: "gemini/gemini-2.5-flash-preview-04-17"
+          CONFIG.FALLBACK_MODELS: '["gemini/gemini-2.5-pro-exp-03-25"]'

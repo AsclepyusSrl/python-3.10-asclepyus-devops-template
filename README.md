@@ -5,21 +5,17 @@ An internal Python project template for Asclepyus projects, featuring automated 
 ## Features
 
 - 🚀 Automatic project renaming and configuration
-- 📦 Poetry for dependency management
+- 📦 UV for dependency management
 - 📝 MkDocs for documentation
-- 🔄 Automated releases with semantic versioning
+- 🔄 Automated releases with semantic versioning using GPT and Changelog Weaver
 - ✨ Pre-commit hooks for code quality
 - 🧪 Ready for testing
 
 ## Prerequisites
 
-1. GitHub Personal Access Token (PAT)
-   - Must be stored as an organization secret named `Workflow_PAT`
-   - Required permissions:
-     - `repo` (Full control of private repositories)
-     - `workflow` (Update GitHub Action workflows)
-   - [How to create a PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
-   - [How to add organization secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-an-organization)
+1. GEMINI API KEY
+   - Requires a Gemini API key and  be stored as an repository secret named `GEMINI_API_KEY`
+   - Click here to generate your own personal api key https://aistudio.google.com/app/apikey
 
 ## Quick Start
 

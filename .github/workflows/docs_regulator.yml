@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: github.actor != 'github-actions[bot]'
+    if: ${{ vars.FEATURE_DOCS == 'true' }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python

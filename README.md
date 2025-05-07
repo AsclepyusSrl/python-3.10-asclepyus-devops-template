@@ -2,6 +2,16 @@
 
 An internal Python project template for Asclepyus projects, featuring automated setup and release management.
 
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Quick Start](#quick-start)
+- [Development Setup](#development-setup)
+- [Creating Releases](#creating-releases)
+- [Documentation](#documentation)
+- [Project Structure](#project-structure)
+
 ## Features
 
 - 🚀 Automatic project renaming and configuration

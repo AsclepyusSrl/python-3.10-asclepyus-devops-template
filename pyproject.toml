@@ -1,21 +1,17 @@
-[tool.poetry]
-name = "<<{repo_name}>>"
+[project]
+name = "batch-file"
 version = "0.1.0"
-description = "Description of the project"
-authors = ["Your Name <you@example.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.4"
-pytest-cov = "^6.0.0"
-mkdocs = "^1.6.1"
-mkdocs-material = "^9.5.47"
-ruff = "^0.8.2"
-pre-commit = "^4.0.1"
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.12",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.8",
+]
 
 [tool.ruff]
 line-length = 88
@@ -60,10 +56,11 @@ select = [
     "PTH",  # pathlib usage (encourages modern path handling)
 ]
 
-[tool.ruff.lint.per-file-ignores]
-"tests/**/*" = ["INP001", "S101", "TRY", "EM", "B"]  # Ignores INP001 in tests dir and all subdirs
 
-# Ignore line length violations
+
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*" = ["INP001", "S101", "TRY", "EM", "B"]
 ignore = [
     "E501",  # line too long
     "S101",  # use of assert (ok in pytest)
@@ -80,7 +77,3 @@ combine-as-imports = true
 force-wrap-aliases = true
 known-first-party = ["worker"]
 required-imports = ["from __future__ import annotations"]
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"

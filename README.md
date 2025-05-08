@@ -59,6 +59,11 @@ An internal Python project template for Asclepyus projects, featuring automated 
    - Configures GitHub Actions
 
 ## Development Setup
+start by renaming the name in pyproject.toml file to your project name
+
+```toml
+name = "<add your project name>"
+```
 
 Run the setup script:
 ```bash

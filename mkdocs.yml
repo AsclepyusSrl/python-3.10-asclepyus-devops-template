@@ -1,4 +1,4 @@
-site_name: <<{readable_name}>>
+site_name: Python 3.10 Asclepyus Devops Template
 theme:
   name: material
   palette:

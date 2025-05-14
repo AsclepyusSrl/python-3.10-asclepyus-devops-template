@@ -1,4 +1,4 @@
-# Welcome to <<{readable_name}>>
+# Welcome to Python 3.10 Asclepyus Devops Template
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
